@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Suggestion App</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #07111f;
+      --card: rgba(255,255,255,0.1);
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #38bdf8;
+      --accent-2: #60a5fa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, Arial, sans-serif;
+      background: radial-gradient(circle at top left, #1d4ed8 0%, #07111f 35%, #030712 100%);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .hero {
+      width: min(1100px, 100%);
+      background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.06));
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 32px;
+      padding: 2.2rem;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 30px 70px rgba(0,0,0,0.28);
+    }
+    .hero-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .pill {
+      display: inline-block;
+      padding: 0.45rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.18);
+      color: #bae6fd;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    h1 { font-size: clamp(2rem, 3vw, 3rem); margin: 0.4rem 0 0.6rem; }
+    p { line-height: 1.75; color: var(--muted); margin: 0; }
+    .btn-row {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin: 1.2rem 0 1.6rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 1.2rem;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #07111f;
+      font-weight: 800;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(56, 189, 248, 0.18);
+    }
+    .btn.secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow: none;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+    .poster {
+      border-radius: 20px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .poster:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.22);
+    }
+    .poster img { display: block; width: 100%; height: auto; }
+    .poster strong { display: block; padding: 0.8rem 0.9rem; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="pill">Movie Recommendation</span>
+        <h1>Movie Suggestion App</h1>
+        <p>This is the GitHub Pages preview of the app. The full original site is built with Flask and is available in the repository.</p>
+      </div>
+    </div>
+    <div class="btn-row">
+      <a class="btn" href="https://github.com/venkatamohithreddy-hue/movie-Suggestion2">Open GitHub Repository</a>
+      <a class="btn secondary" href="https://github.com/venkatamohithreddy-hue/movie-Suggestion2">See the Full Project</a>
+    </div>
+    <div class="grid">
+      <div class="poster"><img src="static/images/poster1.svg" alt="Inception poster" /><strong>Inception</strong></div>
+      <div class="poster"><img src="static/images/poster2.svg" alt="The Matrix poster" /><strong>The Matrix</strong></div>
+      <div class="poster"><img src="static/images/poster3.svg" alt="Interstellar poster" /><strong>Interstellar</strong></div>
+    </div>
+  </div>
+</body>
+</html>
